@@ -1,0 +1,264 @@
+# API REST - ADSO Tienda (JSON ONLY)
+# Archivo para probar CRUD con JSON únicamente
+# Usar con REST Client en VS Code o Thunder Client
+
+@baseUrl = http://localhost:8000
+
+### ===========================
+### CATEGORÍAS - CRUD
+### ===========================
+
+### 1. Obtener todas las categorías
+GET {{baseUrl}}/categoria
+
+### 2. Crear categoría - Electrónicos
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Electrónicos"
+}
+
+### 3. Crear categoría - Ropa
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Ropa y Accesorios"
+}
+
+### 4. Crear categoría - Hogar
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Hogar y Jardín"
+}
+
+### 5. Actualizar categoría
+PUT {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "idCategoria": 1,
+    "nombreCategoria": "Tecnología y Electrónicos"
+}
+
+### 6. Eliminar categoría
+DELETE {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "idCategoria": 3
+}
+
+### ===========================
+### USUARIOS - CRUD
+### ===========================
+
+### 7. Obtener todos los usuarios
+GET {{baseUrl}}/usuarios
+
+### 8. Crear usuario 1
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan.perez@email.com",
+    "urlImagen": "https://example.com/images/juan.jpg",
+    "documento": "12345678",
+    "contrasena": "123456"
+}
+
+### 9. Crear usuario 2
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "María",
+    "apellido": "González",
+    "email": "maria.gonzalez@email.com",
+    "urlImagen": "",
+    "documento": "87654321",
+    "contrasena": "password123"
+}
+
+### 10. Crear usuario 3
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "email": "carlos.rodriguez@email.com",
+    "urlImagen": "https://example.com/images/carlos.jpg",
+    "documento": "11223344",
+    "contrasena": "carlos2024"
+}
+
+### 11. Actualizar usuario
+PUT {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "nombre": "Juan Carlos",
+    "apellido": "Pérez Gómez",
+    "email": "juancarlos.perez@email.com",
+    "urlImagen": "https://example.com/images/juan-updated.jpg",
+    "documento": "12345678",
+    "contrasena": "newpassword123"
+}
+
+### 12. Eliminar usuario
+DELETE {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "idUsuario": 3
+}
+
+### ===========================
+### PRODUCTOS - CRUD
+### ===========================
+
+### 13. Obtener todos los productos
+GET {{baseUrl}}/productos
+
+### 14. Crear producto 1 - Smartphone
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 10,
+    "descripcion": "Smartphone Samsung Galaxy A54",
+    "precio": 599.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/samsung-a54.jpg",
+    "idCategoria": 1
+}
+
+### 15. Crear producto 2 - Laptop
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 5,
+    "descripcion": "Laptop HP Pavilion 15",
+    "precio": 899.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/hp-pavilion.jpg",
+    "idCategoria": 1
+}
+
+### 16. Crear producto 3 - Auriculares
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 25,
+    "descripcion": "Auriculares Bluetooth Sony WH-1000XM4",
+    "precio": 299.99,
+    "unidad": "unidad",
+    "urlImagen": "",
+    "idCategoria": 1
+}
+
+### 17. Crear producto 4 - Camisa
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 15,
+    "descripcion": "Camisa de algodón manga larga",
+    "precio": 45.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/camisa-algodon.jpg",
+    "idCategoria": 2
+}
+
+### 18. Actualizar producto
+PUT {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "idProducto": 1,
+    "cantidad": 8,
+    "descripcion": "Smartphone Samsung Galaxy A54 5G",
+    "precio": 649.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/samsung-a54-5g.jpg",
+    "idCategoria": 1
+}
+
+### 19. Eliminar producto
+DELETE {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "idProducto": 4
+}
+
+### ===========================
+### CARRITO DE COMPRAS - CRUD
+### ===========================
+
+### 20. Obtener todas las compras
+GET {{baseUrl}}/carrito
+
+### 21. Crear compra 1 - Usuario 1 compra Smartphone
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProducto": 1
+}
+
+### 22. Crear compra 2 - Usuario 2 compra Laptop
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "idProducto": 2
+}
+
+### 23. Crear compra 3 - Usuario 1 compra Auriculares
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProducto": 3
+}
+
+### 24. Crear compra 4 - Usuario 2 compra Smartphone
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "idProducto": 1
+}
+
+### 25. Actualizar compra
+PUT {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idCompra": 1,
+    "idUsuario": 2,
+    "idProducto": 3
+}
+
+### 26. Eliminar compra
+DELETE {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idCompra": 4
+}
+
