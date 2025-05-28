@@ -1,17 +1,11 @@
-# API REST - ADSO Tienda (JSON ONLY)
-# Archivo para probar CRUD con JSON únicamente
-# Usar con REST Client en VS Code o Thunder Client
-
 @baseUrl = http://localhost:8000
 
 ### ===========================
 ### CATEGORÍAS - CRUD
 ### ===========================
 
-### 1. Obtener todas las categorías
 GET {{baseUrl}}/categoria
 
-### 2. Crear categoría - Electrónicos
 POST {{baseUrl}}/categoria
 Content-Type: application/json
 
@@ -19,7 +13,6 @@ Content-Type: application/json
     "nombreCategoria": "Electrónicos"
 }
 
-### 3. Crear categoría - Ropa
 POST {{baseUrl}}/categoria
 Content-Type: application/json
 
@@ -27,7 +20,7 @@ Content-Type: application/json
     "nombreCategoria": "Ropa y Accesorios"
 }
 
-### 4. Crear categoría - Hogar
+
 POST {{baseUrl}}/categoria
 Content-Type: application/json
 
@@ -35,7 +28,7 @@ Content-Type: application/json
     "nombreCategoria": "Hogar y Jardín"
 }
 
-### 5. Actualizar categoría
+
 PUT {{baseUrl}}/categoria
 Content-Type: application/json
 
@@ -44,7 +37,7 @@ Content-Type: application/json
     "nombreCategoria": "Tecnología y Electrónicos"
 }
 
-### 6. Eliminar categoría
+
 DELETE {{baseUrl}}/categoria
 Content-Type: application/json
 
@@ -56,10 +49,10 @@ Content-Type: application/json
 ### USUARIOS - CRUD
 ### ===========================
 
-### 7. Obtener todos los usuarios
+
 GET {{baseUrl}}/usuarios
 
-### 8. Crear usuario 1
+
 POST {{baseUrl}}/usuarios
 Content-Type: application/json
 
@@ -72,7 +65,7 @@ Content-Type: application/json
     "contrasena": "123456"
 }
 
-### 9. Crear usuario 2
+
 POST {{baseUrl}}/usuarios
 Content-Type: application/json
 
@@ -85,7 +78,7 @@ Content-Type: application/json
     "contrasena": "password123"
 }
 
-### 10. Crear usuario 3
+
 POST {{baseUrl}}/usuarios
 Content-Type: application/json
 
@@ -98,7 +91,7 @@ Content-Type: application/json
     "contrasena": "carlos2024"
 }
 
-### 11. Actualizar usuario
+
 PUT {{baseUrl}}/usuarios
 Content-Type: application/json
 
@@ -112,7 +105,7 @@ Content-Type: application/json
     "contrasena": "newpassword123"
 }
 
-### 12. Eliminar usuario
+
 DELETE {{baseUrl}}/usuarios
 Content-Type: application/json
 
@@ -124,10 +117,10 @@ Content-Type: application/json
 ### PRODUCTOS - CRUD
 ### ===========================
 
-### 13. Obtener todos los productos
+
 GET {{baseUrl}}/productos
 
-### 14. Crear producto 1 - Smartphone
+
 POST {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -140,7 +133,7 @@ Content-Type: application/json
     "idCategoria": 1
 }
 
-### 15. Crear producto 2 - Laptop
+
 POST {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -153,7 +146,7 @@ Content-Type: application/json
     "idCategoria": 1
 }
 
-### 16. Crear producto 3 - Auriculares
+
 POST {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -166,7 +159,7 @@ Content-Type: application/json
     "idCategoria": 1
 }
 
-### 17. Crear producto 4 - Camisa
+
 POST {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -179,7 +172,7 @@ Content-Type: application/json
     "idCategoria": 2
 }
 
-### 18. Actualizar producto
+
 PUT {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -193,7 +186,7 @@ Content-Type: application/json
     "idCategoria": 1
 }
 
-### 19. Eliminar producto
+
 DELETE {{baseUrl}}/productos
 Content-Type: application/json
 
@@ -205,10 +198,10 @@ Content-Type: application/json
 ### CARRITO DE COMPRAS - CRUD
 ### ===========================
 
-### 20. Obtener todas las compras
+
 GET {{baseUrl}}/carrito
 
-### 21. Crear compra 1 - Usuario 1 compra Smartphone
+
 POST {{baseUrl}}/carrito
 Content-Type: application/json
 
@@ -217,7 +210,6 @@ Content-Type: application/json
     "idProducto": 1
 }
 
-### 22. Crear compra 2 - Usuario 2 compra Laptop
 POST {{baseUrl}}/carrito
 Content-Type: application/json
 
@@ -226,7 +218,7 @@ Content-Type: application/json
     "idProducto": 2
 }
 
-### 23. Crear compra 3 - Usuario 1 compra Auriculares
+
 POST {{baseUrl}}/carrito
 Content-Type: application/json
 
@@ -235,7 +227,7 @@ Content-Type: application/json
     "idProducto": 3
 }
 
-### 24. Crear compra 4 - Usuario 2 compra Smartphone
+
 POST {{baseUrl}}/carrito
 Content-Type: application/json
 
@@ -244,7 +236,7 @@ Content-Type: application/json
     "idProducto": 1
 }
 
-### 25. Actualizar compra
+
 PUT {{baseUrl}}/carrito
 Content-Type: application/json
 
@@ -254,7 +246,7 @@ Content-Type: application/json
     "idProducto": 3
 }
 
-### 26. Eliminar compra
+
 DELETE {{baseUrl}}/carrito
 Content-Type: application/json
 
